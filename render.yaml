@@ -15,3 +15,5 @@ services:
         value: sqlite:///./backend/data/transcripts.db
       - key: FAISS_INDEX_PATH
         value: ./backend/data/faiss_index.bin
+      - key: PYTHON_VERSION
+        value: "3.11.0"
