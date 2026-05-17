@@ -45,7 +45,7 @@ function Skeleton() {
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.55, delay, ease: [0.25, 0.4, 0.25, 1] },
+  transition: { duration: 0.55, delay, ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number] },
 });
 
 export default function ResultPage() {

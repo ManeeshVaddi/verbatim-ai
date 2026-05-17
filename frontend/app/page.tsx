@@ -6,7 +6,7 @@ import QuoteInput from "@/app/components/QuoteInput";
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, delay, ease: [0.25, 0.4, 0.25, 1] },
+  transition: { duration: 0.7, delay, ease: [0.25, 0.4, 0.25, 1] as [number, number, number, number] },
 });
 
 export default function Home() {
