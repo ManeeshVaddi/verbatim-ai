@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.local
+
+# Data — committed for demo deploy (2.4MB total, rebuild with scripts/ingest_congress.py + scripts/build_index.py)
+# backend/data/transcripts.db
+# backend/data/faiss_index.bin
+
+# Node
+node_modules/
+.next/
+out/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
