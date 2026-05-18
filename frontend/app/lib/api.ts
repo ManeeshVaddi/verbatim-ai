@@ -26,6 +26,14 @@ export interface QuoteResult {
   fact_checks: FactCheck[];
 }
 
+export async function pingBackend(): Promise<void> {
+  try {
+    await fetch(`${API_URL}/health`, { signal: AbortSignal.timeout(10000) });
+  } catch {
+    // best-effort warm-up, ignore errors
+  }
+}
+
 export async function submitQuote(text: string, speaker: string): Promise<{ quote_id: number }> {
   const res = await fetch(`${API_URL}/api/quotes`, {
     method: "POST",

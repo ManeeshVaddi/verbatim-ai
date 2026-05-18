@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import QuoteInput from "@/app/components/QuoteInput";
+import { pingBackend } from "@/app/lib/api";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -10,6 +12,8 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function Home() {
+  useEffect(() => { pingBackend(); }, []);
+
   return (
     <main className="relative min-h-screen w-full flex flex-col items-center">
       {/* Top glow over the mesh */}
